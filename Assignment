@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nana Kwame Appiah Mensah</title>
+    <script src="script/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #000000">
+      <a-sky src="#milky-way"></a-sky>
+      <a-light type="ambient" color="#FFFFFF" intensity="0.8"></a-light>
+      <a-light type="directional" position="-1 0 0" intensity="0.5"></a-light>
+
+      <a-entity position="-50 -30 -160">
+        <a-sphere
+          radius="28"
+          material="src: #sun; shader: flat;"
+          segments-width="64"
+          segments-height="64"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 200000; easing: linear"
+        ></a-sphere>
+
+        <a-light
+          type="point"
+          color="#FFF"
+          intensity="1.5"
+          distance="1000"
+          decay="1"
+        ></a-light>
+
+        <a-entity position="0 0 0">
+          <a-torus mixin="orbit" radius="30"></a-torus>
+          <a-torus mixin="orbit" radius="45"></a-torus>
+          <a-torus mixin="orbit" radius="65"></a-torus>
+          <a-torus mixin="orbit" radius="85"></a-torus>
+          <a-torus mixin="orbit" radius="120"></a-torus>
+          <a-torus mixin="orbit" radius="155"></a-torus>
+          <a-torus mixin="orbit" radius="175"></a-torus>
+          <a-torus mixin="orbit" radius="200"></a-torus>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 1440; easing: linear"
+        >
+          <a-entity position="40 0 0">
+            <a-sphere
+              radius="0.8"
+              material="src: #mercury"
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"
+            ></a-sphere>
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 3690; easing: linear"
+        >
+          <a-entity position="55 0 0">
+            <a-entity rotation="177 0 0">
+              <a-sphere
+                radius="1.8"
+                material="src: #venus"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 50000; easing: linear"
+              ></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 6000; easing: linear"
+        >
+          <a-entity position="75 0 0">
+            <a-entity rotation="23.5 0 0">
+              <a-sphere
+                radius="2.0"
+                material="src: #earth"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"
+              ></a-sphere>
+            </a-entity>
+
+            <a-entity
+              animation="property: rotation; to: 0 360 0; loop: false; dur: 450; easing: linear"
+            >
+              <a-entity position="4 4 0">
+                <a-sphere radius="0.5" material="src: #moon"></a-sphere>
+              </a-entity>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 11280; easing: linear"
+        >
+          <a-entity position="95 0 0">
+            <a-entity rotation="25 0 0">
+              <a-sphere
+                radius="1.2"
+                material="src: #mars"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 1050; easing: linear"
+              ></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 77160; easing: linear"
+        >
+          <a-entity position="130 0 0">
+            <a-entity rotation="3 0 0">
+              <a-sphere
+                radius="6.5"
+                material="src: #jupiter"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 600; easing: linear"
+              ></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 192700; easing: linear"
+        >
+          <a-entity position="165 0 0">
+            <a-entity rotation="26.7 0 0">
+              <a-entity>
+                <a-sphere radius="5.5" material="src: #saturn"></a-sphere>
+
+                <a-ring
+                  src="#saturn-ring"
+                  radius-inner="6.5"
+                  radius-outer="10.5"
+                  rotation="-90 0 0"
+                  material="side: double; transparent: true; opacity: 0.8"
+                ></a-ring>
+              </a-entity>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 504000; easing: linear"
+        >
+          <a-entity position="195 0 0">
+            <a-entity rotation="98 0 0">
+              <a-sphere
+                radius="3.5"
+                material="src: #uranus"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 1400; easing: linear"
+              ></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 670000; easing: linear"
+        >
+          <a-entity position="220 0 0">
+            <a-entity rotation="28 0 0">
+              <a-sphere
+                radius="3.4"
+                material="src: #neptune"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 1000; easing: linear"
+              ></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+      <a-assets>
+        <img id="sun" src="texture/2k_sun.jpg" />
+        <img id="mercury" src="texture/2k_mercury.jpg" />
+        <img id="venus" src="texture/2k_venus_surface.jpg" />
+        <img id="earth" src="texture/2k_earth_daymap.jpg" />
+        <img id="mars" src="texture/2k_mars.jpg" />
+        <img id="jupiter" src="texture/2k_jupiter.jpg" />
+        <img id="saturn" src="texture/2k_saturn.jpg" />
+        <img id="saturn-ring" src="texture/2k_saturn_ring_alpha.png" />
+
+        <img id="uranus" src="texture/2k_uranus.jpg" />
+        <img id="neptune" src="texture/2k_neptune.jpg" />
+        <img id="moon" src="texture/2k_moon.jpg" />
+        <img id="stars" src="texture/2k_stars.jpg" />
+        <img id="milky-way" src="texture/2k_stars_milky_way.jpg" />
+
+        <a-mixin
+          id="orbit"
+          geometry="primitive: torus; segmentsTubular: 64; segmentsRadial: 8; arc: 360; radiusTubular: 0.05;"
+          material="opacity: 0.3; shader: flat; color: #FFFFFF; "
+          rotation="90 0 0"
+        ></a-mixin>
+        <a-mixin
+          id="planet-label"
+          text="align: center; color: #FFFFFF; width: 15; side: double"
+        ></a-mixin>
+      </a-assets>
+    </a-scene>
+  </body>
+</html>
